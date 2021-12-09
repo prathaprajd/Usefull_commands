@@ -2,3 +2,4 @@ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' cont
 docker cp httpd_server:/usr/local/apache2/htdocs/index.html .
 docker cp README.md httpd_server:/usr/local/apache2/htdocs
 docker logs -f httpd_server
+docker commit httpd_server myimage:1.0
