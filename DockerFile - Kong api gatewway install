@@ -1,0 +1,14 @@
+FROM centos.7
+MAINTAINER prathp
+
+ENV KONG_VERSION 0.11.2
+
+RUN yum install -y wget kongsite-weibse_url
+    yum clean all
+
+COPY docket-enrtypoint(shell script) /docker-entrypoint(shell script)
+ENRTYPOINT 8000 8443 8001 8444
+
+STOPSIGNAL SIGTERM
+
+CMD ["/usr/local/openresty/nginx/sbin/nginx", "-c" "/usr/local/kong/nginx.conf", "-p", "/usr/local/kong/"]
