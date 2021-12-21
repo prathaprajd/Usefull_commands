@@ -5,6 +5,8 @@ docker logs -f httpd_server
 docker commit httpd_server myimage:1.0
 
 docker rm -f (docker ps -aq)
+docker network create --driver=bridge javaHome
+docker attach $nameOfContaniner
 
 
 Maven
