@@ -1,0 +1,13 @@
+apiversion: v1
+kind: service
+metadata:
+  name: ""
+  namespace: 
+spec:
+  ports:
+    - port: 80
+      targetport: 80
+      protocal: tcp
+  type: nodeport
+  selector:
+    app: "2048"

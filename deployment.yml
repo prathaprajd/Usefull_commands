@@ -1,0 +1,15 @@
+apiVersion: app/v1
+kind: deployment
+metadata:
+  name: "some name"
+  namespace: "somenamespace"
+spec:
+  selector:
+    matchlables:
+      app: "appname"
+  replicas: 5
+  template:
+    metadata:
+      name: "somename"
+      labels:
+        

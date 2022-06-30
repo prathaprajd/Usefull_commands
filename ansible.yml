@@ -1,0 +1,6 @@
+- hosts: kber
+  user: root
+
+  tasks:
+    - name:
+      command: kubect apply -f regapp.yml
